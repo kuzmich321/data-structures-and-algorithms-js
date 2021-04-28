@@ -23,4 +23,15 @@ It's still worth considering the question at this early stage.)
 This forces you to think about the code you'll write before you write it, and helps you catch any lingering
 conceptual issues or misunderstandings before you dive in and have to worry about details as well
 
+4.1. Solve the Problem
+4.2. If you can't... Solve a Simpler Problem!
+
+5.1. Can you check the result?
+5.2. Can you derive the result differently?
+5.3. Can you understand it at a glance?
+5.4. Can you use the result or method for other problem?
+5.5. Can you improve the performance of your solution?
+5.6. Can you think of other ways to refactor?
+5.7. How have other people solved this problem?
+
 */
