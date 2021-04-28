@@ -1,0 +1,14 @@
+<h1>Roadmap</h1>
+<ol>
+    <li>
+    big-0
+    <ul>
+        <li>timing_code</li>
+        <li>simplifying_big_o_expressions</li>
+        <li>space_complexity</li>
+        <li>logarithm</li>
+        <li>big_o_of_hash_tables</li>
+        <li>big_o_of_array</li>
+    </ul>
+    </li>
+</ol>
