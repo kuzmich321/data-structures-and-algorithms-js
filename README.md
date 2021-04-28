@@ -1,7 +1,7 @@
 <h1>Roadmap</h1>
 <ol>
     <li>
-    big-0
+    big-O
     <ul>
         <li>timing_code</li>
         <li>simplifying_big_o_expressions</li>
@@ -9,6 +9,12 @@
         <li>logarithm</li>
         <li>big_o_of_hash_tables</li>
         <li>big_o_of_array</li>
+    </ul>
+    <li>
+    problem_solving_patterns
+    <ul>
+        <li>problem_solving</li>
+        <li>frequency_counter</li>
     </ul>
     </li>
 </ol>
