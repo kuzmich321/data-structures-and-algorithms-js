@@ -16,6 +16,7 @@
         <li>problem_solving</li>
         <li>frequency_counter</li>
         <li>multiple_pointers</li>
+        <li>sliding_window</li>
     </ul>
     </li>
 </ol>
