@@ -42,7 +42,7 @@ const isAnagram = (firstStr, secondStr) => {
     }
 
     for (let char of secondStr) {
-        if (!frequencyCounter[char] && !frequencyCounter[char] >= 1) {
+        if (!frequencyCounter[char] || frequencyCounter[char] < 1) {
             return false
         }
         frequencyCounter[char]--
