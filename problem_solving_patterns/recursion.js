@@ -23,6 +23,11 @@ Base Case
 The condition when the recursion ends
 This is the most important concept to understand
 
+Where things go wrong
+- No base case
+- Forgetting return or returning the wrong thing!
+- Stack overflow!
+
  */
 
 function countDown(num) {
