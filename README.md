@@ -17,6 +17,8 @@
         <li>frequency_counter</li>
         <li>multiple_pointers</li>
         <li>sliding_window</li>
+        <li>divide_and_conquer</li>
+        <li>recursion</li>
     </ul>
     </li>
 </ol>
