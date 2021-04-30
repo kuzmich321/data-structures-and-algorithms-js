@@ -19,6 +19,7 @@
         <li>sliding_window</li>
         <li>divide_and_conquer</li>
         <li>recursion</li>
+        <li>helper_method_recursion</li>
     </ul>
     </li>
 </ol>
