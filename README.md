@@ -30,4 +30,10 @@
         <li>naive_string_search</li>
     </ul>
     </li>
+    <li>
+    sorting_algorithms
+    <ul>
+        <li>bubble_sort</li>
+    </ul>
+    </li>
 </ol>
