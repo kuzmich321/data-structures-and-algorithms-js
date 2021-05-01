@@ -27,6 +27,7 @@
     <ul>
         <li>linear_search</li>
         <li>binary_search</li>
+        <li>naive_string_search</li>
     </ul>
     </li>
 </ol>
