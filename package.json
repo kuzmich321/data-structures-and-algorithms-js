@@ -1,0 +1,24 @@
+{
+  "name": "data_structures-and-algorithms-js",
+  "version": "1.0.0",
+  "description": "<h1>Roadmap</h1> <ol>     <li>     big-O     <ul>         <li>timing_code</li>         <li>simplifying_big_o_expressions</li>         <li>space_complexity</li>         <li>logarithm</li>         <li>big_o_of_hash_tables</li>         <li>big_o_of_array</li>     </ul>     <li>     problem_solving_patterns     <ul>         <li>problem_solving</li>         <li>frequency_counter</li>         <li>multiple_pointers</li>         <li>sliding_window</li>         <li>divide_and_conquer</li>         <li>recursion</li>         <li>helper_method_recursion</li>     </ul>     </li>     <li>     searching_algorithms     <ul>         <li>linear_search</li>         <li>binary_search</li>     </ul>     </li> </ol>",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuzmich321/data-structures-and-algorithms-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuzmich321/data-structures-and-algorithms-js/issues"
+  },
+  "homepage": "https://github.com/kuzmich321/data-structures-and-algorithms-js#readme",
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
+}
