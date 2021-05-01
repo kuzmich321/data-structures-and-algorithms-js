@@ -22,4 +22,11 @@
         <li>helper_method_recursion</li>
     </ul>
     </li>
+    <li>
+    searching_algorithms
+    <ul>
+        <li>linear_search</li>
+        <li>binary_search</li>
+    </ul>
+    </li>
 </ol>
