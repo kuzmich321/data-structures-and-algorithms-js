@@ -20,9 +20,7 @@ Pseudocode:
 }*/
 
 
-const swap = (arr, idx1, idx2) => {
-    [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
-}
+import {swap} from './swap_func.js'
 
 
 // O(n^2)
