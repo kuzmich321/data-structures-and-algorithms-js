@@ -35,6 +35,7 @@
     <ul>
         <li>bubble_sort</li>
         <li>selection_sort</li>
+        <li>insertion_sort</li>
     </ul>
     </li>
 </ol>
