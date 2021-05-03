@@ -37,6 +37,7 @@
         <li>selection_sort</li>
         <li>insertion_sort</li>
         <li>merge_sort</li>
+        <li>quick_sort</li>
     </ul>
     </li>
 </ol>
