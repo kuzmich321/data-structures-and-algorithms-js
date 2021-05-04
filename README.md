@@ -38,6 +38,7 @@
         <li>insertion_sort</li>
         <li>merge_sort</li>
         <li>quick_sort</li>
+        <li>radix_sort</li>
     </ul>
     </li>
 </ol>
