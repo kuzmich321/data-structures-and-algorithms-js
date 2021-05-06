@@ -41,4 +41,15 @@
         <li>radix_sort</li>
     </ul>
     </li>
+    <li>
+    data_structures
+    <ul>
+        <li>
+        linked_lists
+            <ul>
+                <li>singly_linked_list</li>
+            </ul>
+        </li>
+    </ul>
+    </li>
 </ol>
