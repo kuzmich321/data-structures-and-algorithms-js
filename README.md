@@ -48,6 +48,7 @@
         linked_lists
             <ul>
                 <li>singly_linked_list</li>
+                <li>doubly_linked_list</li>
             </ul>
         </li>
     </ul>
