@@ -58,6 +58,13 @@
                 <li>linked_list_stack</li>
             </ul>
         </li>
+        <li>
+        queue
+            <ul>
+                <li>array_queue</li>
+                <li>linked_list_queue</li>
+            </ul>
+        </li>
     </ul>
     </li>
 </ol>
