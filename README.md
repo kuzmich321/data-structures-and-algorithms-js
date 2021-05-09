@@ -51,6 +51,13 @@
                 <li>doubly_linked_list</li>
             </ul>
         </li>
+        <li>
+       stack
+            <ul>
+                <li>array_stack</li>
+                <li>linked_list_stack</li>
+            </ul>
+        </li>
     </ul>
     </li>
 </ol>
