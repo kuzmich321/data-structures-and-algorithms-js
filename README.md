@@ -65,6 +65,13 @@
                 <li>linked_list_queue</li>
             </ul>
         </li>
+        <li>
+        trees
+            <ul>
+                <li>tree_intro</li>
+                <li>bst</li>
+            </ul>
+        </li>
     </ul>
     </li>
 </ol>
