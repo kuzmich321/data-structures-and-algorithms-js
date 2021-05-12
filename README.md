@@ -70,6 +70,7 @@
             <ul>
                 <li>tree_intro</li>
                 <li>bst</li>
+                <li>tree_traversal (includes BFS)</li>
             </ul>
         </li>
     </ul>

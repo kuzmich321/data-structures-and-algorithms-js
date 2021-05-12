@@ -101,3 +101,6 @@ tree.insert(7)
 tree.insert(10)
 console.log(tree)
 console.log(tree.find(16))
+
+
+export {BST}
