@@ -71,6 +71,7 @@
                 <li>tree_intro</li>
                 <li>bst</li>
                 <li>tree_traversal (includes BFS)</li>
+                <li>dfs</li>
             </ul>
         </li>
     </ul>
