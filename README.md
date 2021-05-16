@@ -74,6 +74,12 @@
                 <li>dfs</li>
             </ul>
         </li>
+        <li>
+        heaps
+            <ul>
+                <li></li>
+            </ul>
+        </li>
     </ul>
     </li>
 </ol>
