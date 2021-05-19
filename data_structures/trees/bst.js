@@ -46,8 +46,8 @@ class BST {
         this.root = null
     }
 
-    // O(logN)
-    // Sometimes could be O(N)
+    // Average: O(log(n)) time | O(1) space
+    // Worst: O(n) time | O(1) space
     insert(val) {
         let newNode = new Node(val)
         if (!this.root) {
@@ -74,8 +74,8 @@ class BST {
         }
     }
 
-    // O(logN)
-    // Sometimes could be O(N)
+    // Average: O(log(n)) time | O(1) space
+    // Worst: O(n) time | O(1) space
     find(val) {
         if (!this.root) return false
         let current = this.root
@@ -86,6 +86,50 @@ class BST {
             else current = current.right
         }
         return found ? current : false
+    }
+
+    // Average: O(log(n)) time | O(1) space
+    // Worst: O(n) time | O(1) space
+    remove(val) {
+        if (!this.root) return
+        let current = this.root
+        let parent
+        while (current) {
+            if (val < current.val) {
+                parent = current
+                current = current.left
+            } else if (val > current.val) {
+                parent = current
+                current = current.right
+            } else {
+                if (current.left && current.right) {
+                    current.val = this._getMinValue()
+                    this.remove(current.val)
+                } else if (!parent) {
+                    if (current.left) {
+                        current.val = current.left.val
+                        current.right = current.left.right
+                        current.left = current.left.left
+                    } else if (current.right) {
+                        current.val = current.right.val
+                        current.right = current.right.right
+                        current.left = current.right.left
+                    } else {
+                        current.val = null
+                    }
+                } else if (parent.left === current) parent.left = current.left ? current.left : current.right
+                 else if (parent.right === current) parent.right = current.left ? current.left : current.right
+                break
+            }
+        }
+
+        return this
+    }
+
+    _getMinValue() {
+        let current = this.root
+        while (current.left) current = current.left
+        return current.val
     }
 }
 
@@ -101,6 +145,8 @@ tree.insert(7)
 tree.insert(10)
 console.log(tree)
 console.log(tree.find(16))
+tree.remove(13)
+console.log(tree)
 
 
 export {BST}
