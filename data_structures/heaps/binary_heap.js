@@ -24,6 +24,19 @@ INSERT PSEUDOCODE
         child index
         - Set the index to be parentIndex, and start over!
 
+EXTRACT MAX PSEUDOCODE
+- Swap the first value in the values with the last one
+- Pop from the values property with the last one, so you can return the value at the end
+- Have the new root "sink down" to the correct spot...
+    - Your parent index starts ar 0 (the root)
+    - Find the index of the left child: 2 * index - 1 (make sure it's not out of bounds)
+    - Find the index of the right child: 2 * index + 2 (make sure it's not out of bounds)
+    - If the left or right is greater than element... swap. If both left and right children are larger,
+    swap with the largest child
+    - The child index you swapped to now becomes the new parent index
+    - Keep looking and swapping until neither child is larger than element
+    - Return the old root!
+
  */
 
 
