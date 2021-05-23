@@ -77,7 +77,8 @@
         <li>
         heaps
             <ul>
-                <li></li>
+                <li>binary_heap</li>
+                <li>priority_queue</li>
             </ul>
         </li>
     </ul>
