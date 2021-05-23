@@ -40,9 +40,6 @@ EXTRACT MAX PSEUDOCODE
  */
 
 
-import {swap} from '../../sorting_algorithms/swap_func.js'
-
-
 class MaxBinaryHeap {
     constructor() {
         this.values = []
