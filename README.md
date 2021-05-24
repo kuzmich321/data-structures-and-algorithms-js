@@ -81,6 +81,12 @@
                 <li>priority_queue</li>
             </ul>
         </li>
+        <li>
+        hash_tables
+            <ul>
+                <li>hash_table_intro</li>
+            </ul>
+        </li>
     </ul>
     </li>
 </ol>
