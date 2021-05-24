@@ -23,6 +23,7 @@ class PriorityQueue {
         this.values = []
     }
 
+    // O (log(N)) time | O(1) space
     enqueue(val, priority) {
         let newNode = new Node(val, priority)
         this.values.push(newNode)
@@ -42,6 +43,7 @@ class PriorityQueue {
         }
     }
 
+    // O (log(N)) time | O(1) space
     dequeue() {
         const min = this.values[0]
         const end = this.values.pop()

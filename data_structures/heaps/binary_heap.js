@@ -45,6 +45,7 @@ class MaxBinaryHeap {
         this.values = []
     }
 
+    // O (log(N)) time | O(1) space
     insert(element) {
         this.values.push(element)
         this._bubbleUp()
@@ -63,6 +64,7 @@ class MaxBinaryHeap {
         }
     }
 
+    // O (log(N)) time | O(1) space
     extractMax() {
         const max = this.values[0]
         const end = this.values.pop()
