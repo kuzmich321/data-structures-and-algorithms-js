@@ -85,6 +85,9 @@
         hash_tables
             <ul>
                 <li>hash_table_intro</li>
+                <li>hash_function</li>
+                <li>collisions</li>
+                <li>hash_table</li>
             </ul>
         </li>
     </ul>
