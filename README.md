@@ -90,6 +90,13 @@
                 <li>hash_table</li>
             </ul>
         </li>
+        <li>
+        graphs
+            <ul>
+                <li>graph_intro</li>
+                <li>graph</li>
+            </ul>
+        </li>
     </ul>
     </li>
 </ol>
