@@ -1,3 +1,17 @@
+/*
+
+GRAPH TRAVERSAL USES
+- Peer to peer networking
+- Web crawlers
+- Finding "closest" matches/recommendations
+- Shortest path problems
+    - GPS Navigation
+    - Solving mazes
+    - AI (shortest path to win the game)
+
+ */
+
+
 class Graph {
     constructor() {
         this.adjacencyList = {}
@@ -23,6 +37,46 @@ class Graph {
             this.removeEdge(vertex, adjacentVertex)
         }
         delete this.adjacencyList[vertex]
+    }
+
+    DFSRecursive(start) {
+        let visited = {}
+        let result = []
+        const dfs = vertex => {
+            if (!vertex) return null
+            visited[vertex] = true
+            result.push(vertex)
+            this.adjacencyList[vertex].forEach(neighbor => {
+                if (!visited[neighbor]) {
+                    return dfs(neighbor)
+                }
+            })
+        }
+        dfs(start)
+
+        return result
+    }
+
+    DFSIterative(start) {
+        let stack = [start]
+        let result = []
+        let visited = {}
+        let currentVertex
+
+        visited[start] = true
+
+        while (stack.length) {
+            currentVertex = stack.pop()
+            result.push(currentVertex)
+            this.adjacencyList[currentVertex].forEach(neighbor => {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true
+                    stack.push(neighbor)
+                }
+            })
+        }
+
+        return result
     }
 }
 
@@ -60,3 +114,23 @@ console.log(g.adjacencyList)
 
 g.removeVertex('Aspen')
 console.log(g.adjacencyList)
+console.log('-----------------------------')
+
+let gTraversal = new Graph()
+gTraversal.addVertex('A')
+gTraversal.addVertex('B')
+gTraversal.addVertex('C')
+gTraversal.addVertex('D')
+gTraversal.addVertex('E')
+gTraversal.addVertex('F')
+
+gTraversal.addEdge('A', 'B')
+gTraversal.addEdge('A', 'C')
+gTraversal.addEdge('B', 'D')
+gTraversal.addEdge('C', 'E')
+gTraversal.addEdge('D', 'E')
+gTraversal.addEdge('D', 'F')
+gTraversal.addEdge('E', 'F')
+
+console.log(gTraversal.DFSRecursive('A'))
+console.log(gTraversal.DFSIterative('A'))
