@@ -78,6 +78,27 @@ class Graph {
 
         return result
     }
+
+    BFS(start) {
+        let queue = [start]
+        let result = []
+        let visited = {}
+        visited[start] = true
+        let currentVertex
+
+        while (queue.length) {
+            currentVertex = queue.shift()
+            result.push(currentVertex)
+            this.adjacencyList[currentVertex].forEach(neighbor => {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true
+                    queue.push(neighbor)
+                }
+            })
+        }
+
+        return result
+    }
 }
 
 
@@ -134,3 +155,6 @@ gTraversal.addEdge('E', 'F')
 
 console.log(gTraversal.DFSRecursive('A'))
 console.log(gTraversal.DFSIterative('A'))
+console.log('-----------------------------')
+
+console.log(gTraversal.BFS('A'))
