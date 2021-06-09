@@ -17,7 +17,44 @@ THE APPROACH
 we're checking from the starting node
 4. If the new distance to a node is less than the previous total, we store the new shorter distance for that node
 
+Dijkstra's Pseudocode
+- This function should accept a starting and ending vertex
+- Create an object (we'll call it distances) and set each key to be every vertex in the adjacency list with
+a value of infinity, except for the starting vertex which should have a value of 0
+- After setting a value in the distances object, add each vertex with a priority of Infinity to the priority queue,
+except the starting vertex, which should have a priority of 0 'cause that's where we begin
+- Create another object called previous and set each key to be every vertex in the adjacency list with a value of null
+- Start looping as long as there is anything in the priority queue
+    - Dequeue a vertex from the priority queue
+    - If that vertex is the same as the ending vertex - we are done!
+    - Otherwise loop through each value in the adjacency list at that vertex
+        - Calculate the distance to that vertex from the starting vertex
+        - If the distance is less than what is currently stored in our distances object
+            - Update the distances object with new lower distance
+            - Update the previous object to contain that vertex
+            - enqueue the vertex with the total distance from the start node
+
  */
+
+
+class PriorityQueue {
+    constructor() {
+        this.values = []
+    }
+
+    enqueue(val, priority) {
+        this.values.push({val, priority})
+        this._sort()
+    }
+
+    dequeue() {
+        return this.values.shift()
+    }
+
+    _sort() {
+        this.values.sort((a, b) => a.priority - b.priority)
+    }
+}
 
 
 class WeightedGraph {
@@ -33,16 +70,37 @@ class WeightedGraph {
         this.adjacencyList[v1].push({node: v2, weight})
         this.adjacencyList[v2].push({node: v1, weight})
     }
+
+    dijkstra(start, finish) {
+        let nodes = new PriorityQueue()
+        let distances = {}
+        let previous = {}
+    }
 }
+
+let q = new PriorityQueue()
+q.enqueue('B', 3)
+q.enqueue('C', 5)
+q.enqueue('D', 2)
+q.enqueue('Q', 20)
+console.log(q.values)
 
 let g = new WeightedGraph()
 
 g.addVertex('A')
 g.addVertex('B')
 g.addVertex('C')
+g.addVertex('D')
+g.addVertex('E')
+g.addVertex('F')
 
-g.addEdge('A', 'B', 9)
-g.addEdge('A', 'C', 5)
-g.addEdge('B', 'C', 7)
+g.addEdge('A', 'B', 4)
+g.addEdge('A', 'C', 2)
+g.addEdge('B', 'E', 3)
+g.addEdge('C', 'D', 2)
+g.addEdge('C', 'F', 4)
+g.addEdge('D', 'E', 3)
+g.addEdge('D', 'F', 1)
+g.addEdge('E', 'F', 1)
 
 console.log(g.adjacencyList)
