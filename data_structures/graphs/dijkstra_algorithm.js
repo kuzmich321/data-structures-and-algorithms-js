@@ -37,24 +37,27 @@ except the starting vertex, which should have a priority of 0 'cause that's wher
  */
 
 
-class PriorityQueue {
-    constructor() {
-        this.values = []
-    }
+// class PriorityQueue {
+//     constructor() {
+//         this.values = []
+//     }
+//
+//     enqueue(val, priority) {
+//         this.values.push({val, priority})
+//         this._sort()
+//     }
+//
+//     dequeue() {
+//         return this.values.shift()
+//     }
+//
+//     _sort() {
+//         this.values.sort((a, b) => a.priority - b.priority)
+//     }
+// }
 
-    enqueue(val, priority) {
-        this.values.push({val, priority})
-        this._sort()
-    }
 
-    dequeue() {
-        return this.values.shift()
-    }
-
-    _sort() {
-        this.values.sort((a, b) => a.priority - b.priority)
-    }
-}
+import {PriorityQueue} from '../heaps/priority_queue.js'
 
 
 class WeightedGraph {
@@ -72,9 +75,43 @@ class WeightedGraph {
     }
 
     dijkstra(start, finish) {
-        let nodes = new PriorityQueue()
+        let queue = new PriorityQueue()
         let distances = {}
         let previous = {}
+        let path = []
+        let priority
+        let smallest
+
+        for (let vertex in this.adjacencyList) {
+            priority = vertex === start ? 0 : Infinity
+            distances[vertex] = priority
+            queue.enqueue(vertex, priority)
+            previous[vertex] = null
+        }
+
+        while (queue.values.length) {
+            smallest = queue.dequeue().val
+            if (smallest === finish) {
+                while (previous[smallest]) {
+                    path.push(smallest)
+                    smallest = previous[smallest]
+                }
+                break
+            }
+            if (smallest || distances[smallest] !== Infinity) {
+                for (let neighbor in this.adjacencyList[smallest]) {
+                    let nextNode = this.adjacencyList[smallest][neighbor]
+                    let candidate = distances[smallest] + nextNode.weight
+                    let nextNeighbor = nextNode.node
+                    if (candidate < distances[nextNeighbor]) {
+                        distances[nextNeighbor] = candidate
+                        previous[nextNeighbor] = smallest
+                        queue.enqueue(nextNeighbor, candidate)
+                    }
+                }
+            }
+        }
+        return path.concat(smallest).reverse()
     }
 }
 
@@ -104,3 +141,5 @@ g.addEdge('D', 'F', 1)
 g.addEdge('E', 'F', 1)
 
 console.log(g.adjacencyList)
+
+console.log(g.dijkstra('A', 'E'))
